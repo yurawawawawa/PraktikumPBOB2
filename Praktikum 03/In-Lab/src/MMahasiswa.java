@@ -1,17 +1,14 @@
 public class MMahasiswa {
     public static void main(String[] args) {
-        MataKuliah PBO = new MataKuliah("PBO", "Pemrograman Berorientasi Objek", 3);
-        MataKuliah MBD = new MataKuliah("MBD", "Manajemen Basis Data", 3);
 
-        Dosen D1 = new Dosen("123", "Andi", "Informatika");
+        Mahasiswa M1 = new Mahasiswa(
+            "234", "Citra", "Informatika",      
+            "123", "Andi", "Informatika",        
+            "H1234AB", "motor"                  
+        );
 
-        Kendaraan K1 = new Kendaraan("H1234AB", "motor");
-
-        Mahasiswa M1 = new Mahasiswa("234", "Citra", "Informatika");
-        M1.setDosenWali(D1);
-        M1.setKendaraan(K1);
-        M1.addMatKul(PBO);
-        M1.addMatKul(MBD);
+        M1.addMatKul(new MataKuliah("PBO", "Pemrograman Berorientasi Objek", 3));
+        M1.addMatKul(new MataKuliah("MBD", "Manajemen Basis Data", 3));
 
         M1.printDetailMhs();
         System.out.println("Jumlah Mata Kuliah = " + M1.getJumlahMatKul());

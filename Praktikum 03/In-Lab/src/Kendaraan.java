@@ -1,11 +1,7 @@
 public class Kendaraan {
-    private String noPlat;
-    private String jenis;
+    private String noPlat, jenis;
 
-    public Kendaraan() {
-        noPlat = "";
-        jenis = "";
-    }
+    public Kendaraan() {}
 
     public Kendaraan(String noPlat, String jenis) {
         this.noPlat = noPlat;

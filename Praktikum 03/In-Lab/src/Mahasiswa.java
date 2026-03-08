@@ -1,63 +1,33 @@
 import java.util.ArrayList;
 
 public class Mahasiswa {
-    private String nim;
-    private String nama;
-    private String prodi;
-    private ArrayList<MataKuliah> listMatKul;
+    private String nim, nama, prodi;
+    private ArrayList<MataKuliah> listMatKul = new ArrayList<>();
     private Dosen dosenWali;
     private Kendaraan kendaraan;
 
-    public Mahasiswa() {
-        this.listMatKul = new ArrayList<>();
-    }
+    public Mahasiswa() {}
 
-    public Mahasiswa(String nim, String nama, String prodi) {
+    // Komposisi → Dosen dan Kendaraan dibuat di DALAM constructor
+    public Mahasiswa(String nim, String nama, String prodi,
+                     String nipDosen, String namaDosen, String prodiDosen,
+                     String noPlat, String jenis) {
         this.nim = nim;
         this.nama = nama;
         this.prodi = prodi;
-        this.listMatKul = new ArrayList<>();
+        this.dosenWali = new Dosen(nipDosen, namaDosen, prodiDosen);
+        this.kendaraan = new Kendaraan(noPlat, jenis);
     }
 
-    public String getNim() {
-        return nim;
-    }
+    public String getNim() { return nim; }
+    public String getNama() { return nama; }
+    public String getProdi() { return prodi; }
+    public Dosen getDosenWali() { return dosenWali; }
+    public Kendaraan getKendaraan() { return kendaraan; }
 
-    public String getNama() {
-        return nama;
-    }
-
-    public String getProdi() {
-        return prodi;
-    }
-
-    public Dosen getDosenWali() {
-        return dosenWali;
-    }
-
-    public Kendaraan getKendaraan() {
-        return kendaraan;
-    }
-
-    public void setNim(String nim) {
-        this.nim = nim;
-    }
-
-    public void setNama(String nama) {
-        this.nama = nama;
-    }
-
-    public void setProdi(String prodi) {
-        this.prodi = prodi;
-    }
-
-    public void setDosenWali(Dosen dosenWali) {
-        this.dosenWali = dosenWali;
-    }
-
-    public void setKendaraan(Kendaraan kendaraan) {
-        this.kendaraan = kendaraan;
-    }
+    public void setNim(String nim) { this.nim = nim; }
+    public void setNama(String nama) { this.nama = nama; }
+    public void setProdi(String prodi) { this.prodi = prodi; }
 
     public void addMatKul(MataKuliah newMatKul) {
         listMatKul.add(newMatKul);
