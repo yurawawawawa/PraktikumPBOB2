@@ -1,14 +1,19 @@
+// Nama : Arga Yura Danendra
+// NIM : 24060124140191
+// LAB : B2
+// Deskripsi : Hubungan Inheritance Bangun Datar
+
 public class Lingkaran extends BangunDatar {
     private double jari;
 
     public Lingkaran() {
-        setJmlSisi(0);
+        super();            
+        this.jmlSisi = 0;  
     }
 
+    // keyword - super
     public Lingkaran(double diameter, String warna, String border) {
-        setJmlSisi(0);
-        setWarna(warna);
-        setBorder(border);
+        super(0, warna, border);
         this.jari = diameter / 2;
     }
 
@@ -28,7 +33,12 @@ public class Lingkaran extends BangunDatar {
         return 2 * Math.PI * jari;
     }
 
-    public double getJariJari() {
-        return jari;
+    // override
+    @Override
+    public void printInfo() {
+        super.printInfo(); 
+        System.out.println("Jari-jari   : " + jari);
+        System.out.println("Luas        : " + getLuas());
+        System.out.println("Keliling    : " + getKeliling());
     }
 }

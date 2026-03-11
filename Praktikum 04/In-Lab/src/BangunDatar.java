@@ -1,9 +1,25 @@
-public class BangunDatar {
-    private int jmlSisi;
-    private String warna;
-    private String border;
+// Nama : Arga Yura Danendra
+// NIM : 24060124140191
+// LAB : B2
+// Deskripsi : Hubungan Inheritance Bangun Datar
 
-    public BangunDatar() {}
+public class BangunDatar {
+    protected int jmlSisi;      
+    protected String warna;
+    protected String border;
+    private static int counterBangunDatar = 0;
+
+    public BangunDatar() {
+        counterBangunDatar++;
+    }
+
+    // constructor pake parameter
+    public BangunDatar(int jmlSisi, String warna, String border) {
+        this.jmlSisi = jmlSisi;
+        this.warna = warna;
+        this.border = border;
+        counterBangunDatar++;
+    }
 
     public int getJmlSisi() {
         return jmlSisi;
@@ -16,7 +32,7 @@ public class BangunDatar {
     public String getWarna() {
         return warna;
     }
-    
+
     public void setWarna(String warna) {
         this.warna = warna;
     }
@@ -29,9 +45,13 @@ public class BangunDatar {
         this.border = border;
     }
 
+    public static void printCounterBangunDatar() {
+        System.out.println("Jumlah Objek Bangun Datar: " + counterBangunDatar);
+    }
+
     public void printInfo() {
-        System.out.println("Jumlah sisi: " + jmlSisi);
-        System.out.println("Warna: " + warna);
-        System.out.println("Border: " + border);
+        System.out.println("Jumlah sisi : " + jmlSisi);
+        System.out.println("Warna       : " + warna);
+        System.out.println("Border      : " + border);
     }
 }
