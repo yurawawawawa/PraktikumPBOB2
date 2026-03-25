@@ -1,7 +1,7 @@
 // Nama : Arga Yura Danendra
 // NIM : 24060124140191
 // LAB : B2
-// Deskripsi : Tugas Inheritance - Sistem Pegawai
+// Deskripsi : Tugas Inheritance - Sistem Pegawai.
 
 public class Dosen extends Pegawai {
     protected String fakultas;
