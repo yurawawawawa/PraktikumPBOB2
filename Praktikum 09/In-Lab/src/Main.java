@@ -8,7 +8,7 @@ public class Main {
 
         // Praktikum 9
         Anggora p1      = new Anggora("Gondrong", 2.8);
-        Kembangtelon p2 = new Kembangtelon("Minyak", 3.1);
+        Kembangtelon p2 = new Kembangtelon("Telon", 3.1);
         Anjing p3       = new Anjing("Adhy");
         Anjing p4       = new Anjing("Rehan");
 
