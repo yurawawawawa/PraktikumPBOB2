@@ -4,7 +4,7 @@ USE jdbc_mhs;
 
 CREATE TABLE mahasiswa(
     id INT PRIMARY KEY,
-    nama VARCHAR(100)
+    nama VARCHAR(101)
 );
 
 SELECT * FROM mahasiswa;
